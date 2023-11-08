@@ -1,0 +1,22 @@
+filter: 
+    const filteredArray = arrayName.filter(function(value, index, arrayName) {
+        return condition;
+    });
+> It filters records based on filter condition and generate a new array.
+find: 
+    const filteredValue = arrayName.find(function(value, index, arrayName) {
+        return condition;
+    });
+> Using find we can retrieve first matching value if condition is matching, otherwise it returns undefined.
+some: Used to verify whether value exist in the array or not. if exist it returns true otherwise it returns false.
+    const isValueExist = arrayName.some(function(value, index, arrayName) {
+        return condition;
+    });
+every: 
+    const isEveryValueMatched = arrayName.every(function(value, index, arrayName) {
+        return condition;
+    });
+reduce:
+    const resultant = arrayName.reduce(function(acculumator, value) {
+        return logic..
+    }, initialValue);

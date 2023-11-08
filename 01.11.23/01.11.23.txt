@@ -1,0 +1,31 @@
+Arrow Functions: 
+    some(function(value) {
+        return value * 2;
+    });
+    some((value) => value * 2);
+> Enhanced Object Literals
+    define fields with variable assignment of the same name
+    define functions
+    define dynamic (calculated) properties
+    var variableName = value;
+    var objectName = {
+        propertyName
+    }
+Template Strings
+    `${variableName}string${variableName}stringstring`;
+Default Function Arguments: Used to assign default value to the arguments of a function.
+    function functionName(arg1, arg2 = defaultValue) {
+    }
+    functionName(value1, value2);
+    functionName(value1);
+7. Rest and Spread Operator
+    Rest: Stores rest of parameters in an array.
+        function functionName(parameter1, parameter2, ...arrayName) {
+        }
+        functionName(value1);
+        functionName(value1, value2);
+        functionName(value1, value2, vlaue3);
+        functionName(value1, value2, value3, value4);
+    Spread: Extract values from array or object individually.
+        var obj1 = {property1: value1};
+        var obj2 = {...obj1, property2: value2};

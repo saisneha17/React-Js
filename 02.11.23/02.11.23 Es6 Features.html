@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var mobileNo = '9032456123';
+
+        mobileNo = mobileNo.split('');
+
+        const [d1, d2, d3, d4, d5, d6, d7, d8, d9, d10] = mobileNo;
+
+        const mobileNoStr = `+91 ${d1}${d2}${d3}-${d4}${d5}${d6}-${d7}${d8}${d9}${d10}`;
+
+        console.log(mobileNoStr);
+
+        const { empId, empName, empSalary, empDesignation } = {empId: '9012', empName: 'Karthik', empSalary: 90123, empDesignation: 'Software Engineer'};
+
+        console.log(empDesignation);
+
+
+        const promise = new Promise(function(resolve, reject) {
+            const isCredentialsValid = false;
+            setTimeout(() => {    
+                if (isCredentialsValid) {
+                    resolve('Navigate to Dashboard');
+                } else {
+                    reject('Show error message');
+                }
+            }, 1000);
+        });
+
+        promise.then(function(response) {
+            console.log(response);
+        }).catch(function(error) {
+            console.log(error);
+        });
+
+
+    </script>
+
+    <!-- <script src="./2.js"></script> -->
+</body>
+</html>

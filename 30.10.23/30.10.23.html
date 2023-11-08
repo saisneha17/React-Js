@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let username = 'varun23';
+
+        if (username) {
+            let isActive = true;
+            console.log(isActive);
+        }
+
+        const nums = [90, 2, 12, 4]
+
+        for (let i = 0; i < nums.length; i++) {
+            console.log(nums[i]);
+        }
+
+        nums.forEach(function(num, index, array) {
+            console.log(num, index);
+        });
+
+        const voters = [
+            {
+                name: 'Varun',
+                age: 22
+            },
+            {
+                name: 'Charan',
+                age: 29
+            },
+            {
+                name: 'Ganesh',
+                age: 34
+            }
+        ];
+
+        voters.forEach(function(voter, index) {
+            console.log(voter.name, voter.age);
+        })
+
+
+    </script>
+</body>
+</html>

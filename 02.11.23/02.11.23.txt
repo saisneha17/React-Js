@@ -1,0 +1,46 @@
+8. Destructing of Array and Object
+9. Promises & Async and await
+10. Modules
+Destructing of Array/Object: Using this we can extract values from it individually.
+    Syntax:
+        Object:
+        const { variableName1, variableName2 } = {property1: value, property2, ..., propertyN};
+    Array:
+        const [variableName1, variableName2] = [value1, value2, value3, ..., valueN];
+    9032345245
+    +91 903-234-5245
+    const state = useState(0);
+    const count = state[0];
+    const setCount = count[1];
+    response = {
+        status: 'OK',
+        statusCode 200,
+        responseText: '',
+    }
+    const { status, responseText } = response;
+Modules:
+export
+import
+    value
+    {}
+export default value;
+export const a = 10;
+export function functioName() {
+}
+{ a, functioName }
+import value from 'relativePathOfFile';
+import { a, functioName } from 'relativePathOfFile';
+Promises: The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+A Promise is in one of these states:
+pending: initial state, neither fulfilled nor rejected.
+fulfilled: meaning that the operation was completed successfully.
+rejected: meaning that the operation failed.
+const promise = new Promise((resolve, reject) => {
+    resolve(value) - If success response, we need to call resolve function.
+    reject(value) - If failure case, we need to call reject function.
+});
+promise.then(function(response) {
+}).catch(function(error) {
+    
+});
+If we resolve function, promise call then function. If we call reject function, promise call catch function.

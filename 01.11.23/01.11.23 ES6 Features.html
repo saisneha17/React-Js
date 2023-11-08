@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const products = [
+            {
+                name: 'realme narzo 60 5G',
+                price: 17749,
+                brand: 'realme'
+            },
+            {
+                name: 'Redmi Note 10S',
+                price: 13399,
+                brand: 'redmi'
+            },
+            {
+                name: 'Redmi A2',
+                price: 5299,
+                brand: 'redmi'
+            },
+            {
+                name: 'Samsung Galaxy M13',
+                price: 9199,
+                brand: 'samsung'
+            }
+        ];
+        // const totalAmount = products.reduce(function(acc, product) {
+        //     return acc + product.price;
+        // }, 0);
+
+        const sum = (acc, product) => acc + product.price;
+
+        const totalAmount = products.reduce((acc, product) => acc + product.price, 0);
+
+        console.log(totalAmount);
+
+        var username = 'nitish90';
+
+        var id = 900;
+
+        var user = {
+            username,
+            uid: id,
+            getUserId: () => {
+                return this.uid;
+            },
+            getUsername() {
+                return this.username
+            },
+            [username + '_' + 1]: username,
+        };
+
+        var dateObj = new Date();
+
+        let dateStr = dateObj.getDate() + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear();
+
+        console.log(dateStr);
+
+        dateStr = `${dateObj.getDate()}/${dateObj.getMonth() + 1}/${dateObj.getFullYear()}`;
+
+        console.log(dateStr);
+
+        function sortData(data = [], order = 'asc') {
+            if (order === 'asc') {
+                return data.sort();
+            } else {
+                return data.sort().reverse();
+            }
+        }
+
+        const result = sortData([89, 12, 67, 34, 89], 'desc');
+
+        console.log(result);
+
+        function nums(num1, num2, ...numArray) {
+            console.log(num1, num2, numArray);
+        }
+
+        nums(10, 20, 40, 60, 90);
+
+        var employee = {firstName: 'Karthik', lastName: 'L'};
+
+        var enhancedEmployee = {...employee, salary: 90000, designation: 'techie'};
+
+        console.log(enhancedEmployee);
+
+        var names = ['Varun', 'Lokesh'];
+
+        var enhancedNames = ['Jayeesh', ...names, 'Lokesh'];
+
+        console.log(enhancedNames);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const products = [
+            {
+                name: 'realme narzo 60 5G',
+                price: 17749,
+                brand: 'realme'
+            },
+            {
+                name: 'Redmi Note 10S',
+                price: 13399,
+                brand: 'redmi'
+            },
+            {
+                name: 'Redmi A2',
+                price: 5299,
+                brand: 'redmi'
+            },
+            {
+                name: 'Samsung Galaxy M13',
+                price: 9199,
+                brand: 'samsung'
+            }
+        ];
+
+        var filteredProducts = [];
+
+        for (let i = 0; i < products.length; i++) {
+            if (products[i].brand === 'samsung') {
+                filteredProducts.push(products[i]);
+            }
+        }
+        console.log(filteredProducts);
+
+        const _filteredProducts = products.filter(function(product) {
+            return ['samsung', 'redmi'].includes(product.brand);
+        });
+
+        console.log(_filteredProducts);
+
+
+        const filteredProduct = products.find(function(product, index) {
+            return product.name === 'Samsung Galaxy M13';
+        });
+
+        console.log(filteredProduct);
+
+        const isProductExist = products.some(function(product, index) {
+            return product.name === 'Samsung Galaxy M13 ';
+        });
+
+        console.log(isProductExist);
+
+        const users = [
+            {
+                name: 'Charan',
+                mobile: 9023123123,
+                email: 'charan@gmail.com',
+                academic: {
+                    degree: 'B Tech',
+                    branch: 'CSE',
+                    percentage: 75
+                }
+            },
+            {
+                name: 'Dinesh',
+                mobile: 890123900,
+                email: 'dinesh@gmail.com',
+                academic: {
+                    degree: 'B Tech',
+                    branch: 'CSE',
+                    percentage: 75
+                }
+            },
+        ];
+
+        const isCharanExist = users.some(function(user) {
+            return (user.email === 'charan@gmail.com' || user.mobile === 9023123103);
+        });
+
+        console.log(isCharanExist);
+
+        const mandatoryConditions = ['B Tech', 'CSE', 60];
+
+        const isEveryUserEligible = users.every(function(value) {
+            return mandatoryConditions.includes(value.academic.degree) && mandatoryConditions.includes(value.academic.branch) && value.academic.percentage > mandatoryConditions[2];
+        });
+
+
+        console.log(isEveryUserEligible);
+
+        const totalAmount = products.reduce(function(acc, product) {
+            return acc + product.price;
+        }, 0);
+
+        console.log(totalAmount);
+
+    </script>
+</body>
+</html>
