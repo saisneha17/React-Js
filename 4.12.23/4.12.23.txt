@@ -1,0 +1,13 @@
+http://localhost:3000/employees
+    http://localhost:3000/employees/create
+    App.js
+        <Routes>
+            <Route path="/employees" element={<ComponentName/>}>
+                <Route path="create" element={<ComponentName/>}></Route>
+                <Route path="update" element={<ComponentName/>}></Route>
+                <Route path="all" element={<ComponentName/>}></Route>
+            </Route>
+        </Routes>
+        import { Outlet } from 'react-router-dom';
+            Employees.js
+                <Outlet/>

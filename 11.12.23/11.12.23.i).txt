@@ -1,0 +1,5 @@
+Backend sourcecode
+
+after navigating into the folder,  use this commands to install and start the server.
+npm install (one time) for installing the packages.
+npm start - To start the server
